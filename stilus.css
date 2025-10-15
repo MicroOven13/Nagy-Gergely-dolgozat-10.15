@@ -92,13 +92,13 @@ footer a {
  
 @media (max-width: 1000px) {
     main {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-items: center;
         align-items: center;
     }
  
     .car-images {
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         justify-content: center;
     }
  
@@ -109,8 +109,8 @@ footer a {
  
 @media (max-width: 600px) {
     nav {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 5px;
     }
  
