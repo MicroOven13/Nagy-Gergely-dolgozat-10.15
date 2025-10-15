@@ -1,115 +1,58 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    max-width: 700px;
-    margin: auto;
-}
-
-main {
-    display: grid;
-    grid-template-areas: 
-    "h"
-    "n"
-    "a"
-    "f";
-}
-
-article {
-    margin-top: 20px;
-    grid-area: a;
-    gap: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-area: a;
-}
-
-article img{
-width: 100%;
-
-}
-
-section {
-    border: solid 2px rgb(69, 125, 247);
-    border-radius: 5px;
-
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: black;
 }
 header {
-    margin-top: 15px;
-    grid-area: h;
-    background-color: rgb(47, 147, 241);
-    border: solid 3px rgb(6, 82, 153);
-    border-radius: 10px;
+    background-color: green;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 header h1 {
-    text-align: center;
-    color: white;
-}
-
-nav {
-    margin-top: 15px;
-    padding: 20px;
-    background-color: rgb(13, 113, 194);
-    grid-area: n;
-    border-radius: 5px;
+    margin: 0;
 }
 
 nav a {
-    color: yellow;
+    margin: 0 10px;
+    color: white;
     text-decoration: none;
-    padding: 10px;
+    font-weight: bold;
+    padding:5px 10px;
 }
 
-
-footer {
-color: black;
-grid-area: f;
-text-align: center;
-margin-top: 15px;
-padding: 20px;
-background-color: aqua;
-border: solid 2px rgb(47, 118, 248);
-border-radius: 10px;
+nav {
+    margin-top: 10px;
 }
 
-a:hover {
-    background-color: aqua;
+main{
+    display:grid;
+    gap: 20px;
+    justify-content: space-around;
+    background-color: white;
+    padding: 20px;
 }
 
-@media screen and (max-width:720px) {
-    body {
-        max-width: 500px;
-    }
-    article {
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-    }
+nav a:hover {
+    background-color: green;
+    border-radius: 5px;
+}
+.card {
+    background: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    min-width: 250px;
+    box-shadow: 0 2px 5px black;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-@media screen and (max-width:520px) {
-    body {
-        max-width: 300px;
-    }
-    article {
-        display: grid;
-        grid-template-columns: 1fr ;
-    }
-}
-
-@media screen and (max-width:320px) {
-    body {
-        max-width: 200px;
-    }
-    article {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-
-@media screen and (max-width:200px) {
-    body {
-        display: none;
-    }
-}
