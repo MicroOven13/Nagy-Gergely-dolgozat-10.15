@@ -1,79 +1,121 @@
 body {
-  font-family: Arial;
-  margin: 0;
-  padding: 0;
-  background: white;
-  color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+    color: #333;
 }
+ 
 header {
-  background-color: green;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-}
-
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 5px 10px;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-main {
-  display: grid;
-  gap: 20px;
-  justify-content: space-around;
-  background-color: white;
-  padding: 20px;
-}
-
-nav a:hover {
-  background-color: green;
-  border-radius: 5px;
-}
-.kocsik {
-  background: white;
-  border: 1px solid white;
-  border-radius: 5px;
-  padding: 15px;
-  width: 300px;
-  min-width: 250px;
-  box-shadow: 0 2px 5px black;
-}
-.kocsik img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-.kocsi-images {
-  gap: 10px;
-  max-width: 300px;
-}
-.kocsi-images img{
-    width: 100%;
-    border-radius: 10px;
-    border: 1px solid white;
-}
-
-footer {
-    text-align: center;
+    background-color: lightgreen;
+    color: white;
     padding: 20px;
-    margin-top: 15px;
-    background-color: white;
+    text-align: center;
 }
-footer a {
-    color: lightgreen;
+ 
+header h1 {
+    margin: 0;
+}
+ 
+nav {
+    margin-top: 10px;
+}
+ 
+nav a {
+    margin: 0 10px;
+    color: white;
     text-decoration: none;
     font-weight: bold;
+    padding: 5px 10px;
+}
+ 
+nav a:hover {
+    background-color: #00643d;
+    border-radius: 5px;
+}
+ 
+ 
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 20px;
+    background-color: white;
+    gap: 20px;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 280px;
+    min-width: 250px;
+}
+ 
+.car-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+ 
+.car-images img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+ 
+ 
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
+ 
+footer a {
+    color: #00794d;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+ 
+@media (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .car-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+ 
+    .car-images img {
+        width: 45%;
+    }
+}
+ 
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+ 
+    .card, .car-images {
+        width: 100%;
+        max-width: 300px;
+    }
 }
