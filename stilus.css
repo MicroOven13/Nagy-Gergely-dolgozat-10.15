@@ -90,9 +90,9 @@ footer a {
 }
  
  
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         justify-items: center;
         align-items: center;
     }
